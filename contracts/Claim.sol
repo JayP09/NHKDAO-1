@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./NhkToken.sol";
+import "./Nhktoken.sol";
 
 contract Claim is NhkToken{
     NhkToken public nhkToken;
@@ -10,7 +10,7 @@ contract Claim is NhkToken{
         nhkToken = _nhkToken;
     }
     mapping(address => bool) claimed;
-    uint claimAmount = 10;
+    uint claimAmount = 30;
 
     function claim() public {
         require(claimed[msg.sender] != true,"Error1");

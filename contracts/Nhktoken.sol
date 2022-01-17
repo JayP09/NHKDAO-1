@@ -45,8 +45,8 @@ contract NhkToken is SafeMath {
     constructor() payable{
         symbol = "NHK";
         name = "Nhk Token";
-        decimals = 2;
-        _totalSupply = 100000;
+        decimals = 18;
+        _totalSupply = 1000000000000000000000000; // 1 million
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
     }
